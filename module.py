@@ -33,6 +33,8 @@ def answer2pix(answer):
     返回:
     tk_image -- Tkinter兼容的图像对象
     """
+    # print(answer)
+
     # 创建一个不带边框的空白图形
     fig = Figure()
     ax = fig.add_axes((0, 0, 1, 1), frameon=False, aspect=1)

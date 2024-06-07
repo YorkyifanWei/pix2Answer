@@ -22,20 +22,26 @@ def process_image(image_path, callback):
     无
     """
     # 打印处理开始信息
-    # 示例处理逻辑
-    print("Processing image:", image_path)
+
+    # # 示例处理逻辑
+    # print("Processing image:", image_path)
+
     # 打开图像文件
     img = Image.open(image_path)
     # 初始化OCR对象，用于识别图像中的LaTeX代码
     latex_ocr = LatexOCR()
     # 使用OCR识别图像中的LaTeX代码
     latex_input = latex_ocr(img)
-    # 打印识别得到的LaTeX输入
-    print("Latex input:", latex_input)
+
+    # # 打印识别得到的LaTeX输入
+    # print("Latex input:", latex_input)
+
     # 使用module模块中的函数处理LaTeX输入，得到LaTeX输出
     latex_output = module.pix2answer(latex_input)
-    # 打印处理后的LaTeX输出
-    print("Latex output:", latex_output)
+
+    # # 打印处理后的LaTeX输出
+    # print("Latex output:", latex_output)
+
     # 根据LaTeX输出生成对应的图像
     external_image = module.answer2pix(latex_output)
     # 调用回调函数，传入LaTeX输入、输出及生成的图像

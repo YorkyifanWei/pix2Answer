@@ -1,9 +1,36 @@
-# pix2Answer
-大学生小组作业：识别图片中的数学公式并计算其中的结果
-## Introduction
-- @author :JingWangBo, TorryQ, YorkyifanWei, ZhouGenFa, ZhangXian
-## Notice
-- 基于库pix2tex(v0.1.2)创建的模型
-- 基于库latex2sympy2(v1.9.1)进行的运算
-- 基于库matplotlib(v3.9.0)进行的LaTeX渲染
-- 基于库tkinter的图形用户界面
+# Pix2Answer: 图像中的数学公式识别与计算工具
+## 项目简介
+Pix2Answer 是一个创新的数学辅助工具，旨在帮助学生和教育工作者快速识别并计算图片中的数学公式。通过结合先进的图像处理技术和数学解析算法，该工具能够将照片中的数学表达式转化为可计算的LaTeX格式，进而给出计算结果。项目由 JingWangBo、TorryQ、YorkyifanWei、ZhouGenFa 和 ZhangXian 联合开发，旨在简化数学问题的解答过程，提升学习效率。
+## 功能亮点
+- 公式识别：利用 pix2tex 库的 OCR 技术，精准识别图片中的数学公式。
+- 公式转换与计算：通过 latex2sympy2 和 sympy，将识别的公式转换为可计算的数学表达式，并执行计算。
+- 结果可视化：使用 matplotlib 生成计算结果的图像表示，直观展示。
+- 用户界面：构建了基于 tkinter 的图形界面，便于用户上传图片、查看识别的公式及计算结果。
+## 技术栈
+- 图像处理：Pillow (PIL) 用于图像的读取与基本处理。
+- 公式识别：pix2tex 的 LatexOCR 类实现图像到LaTeX的转换。
+- 数学计算：latex2sympy2 与 sympy 处理数学公式解析与计算。
+- GUI开发：tkinter 构建跨平台的图形用户界面。
+## 项目结构
+- main.py：项目主入口，负责初始化GUI界面及图像处理逻辑。
+- module.py：核心功能模块，包含公式识别与图像生成函数。
+- view.py：定义GUI视图，实现用户交互组件。
+- test.py：测试脚本，验证核心功能的正确性。
+- .gitignore：配置文件，排除无关文件于版本控制之外。
+- README.md：当前文档，项目说明与指南。
+## 使用教程
+1. 安装依赖：确保安装所有必要的Python库，通过运行`pip install pillow matplotlib sympy pix2tex`完成。
+2. 运行程序：在命令行中，切换到项目根目录，执行 python main.py 启动应用。
+3. 上传图片：通过GUI界面的“上传图片”按钮，选择含有数学公式的图片。
+4. 查看结果：应用将显示原始公式、计算结果及结果图片（如果适用）。
+## 依赖版本
+- pix2tex       -- v0.1.2
+- latex2sympy2  -- v1.9.1
+- matplotlib    -- v3.9.0
+- tkinter
+## 未来展望
+- 扩展支持更多数学符号与复杂公式的识别。
+- 优化图像处理算法，提升识别速度与准确率。
+- 引入更丰富的用户交互设计，提升用户体验。
+## 致谢
+感谢团队成员的共同努力，老师持续的支持与指导，以及开源社区提供的强大工具和库，使得该项目得以实现。
