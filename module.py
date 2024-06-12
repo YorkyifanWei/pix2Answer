@@ -58,7 +58,7 @@ def answer2pix(answer):
         # 立即转换为Tkinter兼容的图像格式，然后关闭原始PIL图像
         tk_image = ImageTk.PhotoImage(image=image)
         image.close()  # 显式关闭图像
-        print("Image saved to", temp_file.name)
+        # print("Image saved to", temp_file.name)
 
     # 尝试删除文件，此时临时文件应该已经关闭
     try:
